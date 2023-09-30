@@ -1,0 +1,50 @@
+// $colors: (#3faee5, #6d03ce), 50px, 80px;
+
+.back-3faee5 {
+  background: linear-gradient(to bottom, #3faee5 0, #6d03ce 100%);
+}
+
+.back-ffa76a {
+  background: linear-gradient(to bottom, #ffa76a 0, #ff8e38 100%);
+}
+
+.back-5782ea {
+  background: linear-gradient(to bottom, #5782ea 0, #2251af 100%);
+}
+
+.back-95e5ff {
+  background: linear-gradient(to bottom, #95e5ff 0, #009688 100%);
+}
+
+.back-ff92f6 {
+  background: linear-gradient(to bottom, #ff92f6 0, #b300a5 100%);
+}
+
+%cc {
+  line-height: 26px;
+  padding: 30px;
+  border-radius: 8px 8px 8px 40px;
+  margin-top: 30px;
+}
+
+.cc-blue {
+  background-color: #f3f5ff;
+  border-bottom: 4px solid #b0bdff;
+  @extend %cc;
+}
+
+.cc-green {
+  background-color: #fff3e6;
+  border-bottom: 4px solid #ffc093;
+  @extend %cc;
+}
+
+.cc-purple {
+  background-color: #fbeefd;
+  border-bottom: 4px solid #f6bcff;
+  @extend %cc;
+}
+
+.blue-text {
+  color: #673ab7;
+}

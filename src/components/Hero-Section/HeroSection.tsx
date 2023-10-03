@@ -42,7 +42,7 @@ const HeroSection = () => {
           <button>Essayez maintenant</button>
         </div>
         <Reveal>
-          <img src="images/mobile_hero_banner.png" />
+          <img src="images/mobile_hero_banner.png" alt="hero"/>
         </Reveal>
       </div>
     </div>

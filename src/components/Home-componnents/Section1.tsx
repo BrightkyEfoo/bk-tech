@@ -7,6 +7,7 @@ import "./style.scss";
 import { Autoplay } from "swiper/modules";
 import { useScroll, motion } from "framer-motion";
 import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const cards = [
   {
@@ -47,6 +48,12 @@ const Section1 = () => {
     offset: ["0 1", "1.33 1"],
   });
 
+  const isSmall = useMediaQuery({
+    query: "(max-width: 900px)",
+  });
+  const isXSmall = useMediaQuery({
+    query: "(max-width: 600px)",
+  });
   return (
     <motion.div
       ref={ref}
@@ -59,8 +66,8 @@ const Section1 = () => {
       <div className="section1-container-sub">
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={5}
-          slidesPerView={3}
+          spaceBetween={isSmall ? 50 : 5}
+          slidesPerView={isXSmall ? 1 : isSmall ? 2 : 3}
           loop={true}
           autoplay={{
             delay: 2000,

@@ -11,6 +11,32 @@
   align-items: center;
   z-index: 10;
   transition: all ease 400ms;
+  /* position: relative; */
+}
+
+.menu-button {
+  padding: 13px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.m-blacked {
+  background-color: rgba(0, 0, 150, 0.5);
+  /* color: white; */
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .onScroll {
@@ -29,6 +55,8 @@
   font-weight: bold;
 }
 
+
+
 .onScroll > ul {
   color: #3f36b9;
 }
@@ -44,6 +72,44 @@
 }
 
 .onScroll > p:first-child > span:first-child {
+  color: #3f36b9;
+}
+
+.mobile-nav-sub > p:first-child{
+  font-size: 32px;
+  margin: 0;
+  font-weight: 800;
+}
+
+.mobile-nav-sub{
+  /* padding: 35px; */
+  width: 45%;
+  min-width: 370px;
+  background-color: rgb(16, 16, 16);
+  height: 100%;
+  color: #3f36b9;
+}
+
+.mobile-nav-sub > ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mobile-nav-sub > p:first-child{
+  background-color: white;
+  padding: 12px 25px;
+}
+
+.mobile-nav-sub > p:first-child > span:first-child {
+  color: black;
+}
+.mobile-nav-sub > p:first-child > span:last-child {
   color: #3f36b9;
 }
 

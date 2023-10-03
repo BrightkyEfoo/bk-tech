@@ -166,3 +166,12 @@
   top: -10%;
   right: -135px;
 }
+
+@media only screen and (max-width: 600px) {
+  .mobile-nav-sub > p:first-child{
+    font-size: 22px;
+  }
+  .navbar-container > p:first-child {
+    font-size: 22px;
+  }
+}

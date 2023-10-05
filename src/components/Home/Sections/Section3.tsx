@@ -1,6 +1,5 @@
 import React from "react";
-import Card3 from "../Cards/Card3";
-import Reveal3 from "../Reveal/Reveal3";
+import Card3 from "../cards/Card3";
 const cards = [
   {
     image: "images/image-d.jpg",

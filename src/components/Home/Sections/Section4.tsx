@@ -1,6 +1,6 @@
 import React from "react";
-import Card4 from "../Cards/Card4";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import Card4 from "../cards/Card4";
 
 const cards: {
   image: string;

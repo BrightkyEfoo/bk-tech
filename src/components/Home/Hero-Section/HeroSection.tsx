@@ -1,7 +1,7 @@
 import "./style.scss";
 import { TypeAnimation } from "react-type-animation";
 import { useEffect } from "react";
-import Reveal from "../Reveal/Reveal";
+import Reveal from "../../Reveal/Reveal";
 
 const HeroSection = () => {
   useEffect(() => {

@@ -72,7 +72,7 @@
   align-items: center;
   justify-content: center;
   &::before {
-    background-image: url("../../images/dot-pattern.png");
+    background-image: url("../../../images/dot-pattern.png");
     height: 400px;
     width: 100%;
     background-repeat: repeat;
@@ -187,7 +187,7 @@
   margin: 25px;
   margin-top: 150px;
   padding-top: 35px;
-  background-image: url("../../images/dot_bg.png");
+  background-image: url("../../../images/dot_bg.png");
 }
 
 .section5-container-sub {

@@ -1,5 +1,5 @@
 import React from "react";
-import CustomerSlider from "../CustomersSlider/CustomerSlider";
+import CustomerSlider from "../../CustomersSlider/CustomerSlider";
 const images = [""];
 const Section6 = () => {
   return (

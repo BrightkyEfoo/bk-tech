@@ -1,5 +1,5 @@
-import Card2 from "../Cards/Card2";
-import Reveal2 from "../Reveal/Reveal2";
+import Card2 from "../cards/Card2";
+import Reveal2 from "../../Reveal/Reveal2";
 
 const cards = [
   {

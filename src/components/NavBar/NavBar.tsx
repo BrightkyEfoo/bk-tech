@@ -5,11 +5,32 @@ import { MdSunny } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { VscMenu } from "react-icons/vsc";
 import MobileNavBar from "./MobileNavBar";
+import useGoHome from "../../hooks/useGoHome";
+import { useNavigate } from "react-router-dom";
 export const navContext = createContext<{
   isMobNavVisible: boolean;
   setisMobNavVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }>({ isMobNavVisible: false, setisMobNavVisible: () => {} });
 
+export const links: {
+  text: string;
+  link?: string;
+}[] = [
+  {
+    text: "acceuil",
+    link: "/",
+  },
+  {
+    text: "about",
+    // link : 'about'
+  },
+  {
+    text: "services",
+  },
+  {
+    text: "contact",
+  },
+];
 const NavBar = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const [colorChange, setColorchange] = useState(false);
@@ -24,10 +45,12 @@ const NavBar = () => {
       setColorchange(false);
     }
   };
+  const navigate = useNavigate();
+  const goHome = useGoHome();
 
   console.log("isMobile", isMobile);
   const handleToggleMenu = () => {
-    console.log('toggled')
+    console.log("toggled");
     setisMobNavVisible((prev) => {
       return !prev;
     });
@@ -41,7 +64,7 @@ const NavBar = () => {
         ref={navRef}
         className={"navbar-container " + (colorChange ? "onScroll" : "")}
       >
-        <p>
+        <p onClick={goHome}>
           <span>BK</span>
           <span>-</span>
           <span>TECH</span>
@@ -49,10 +72,13 @@ const NavBar = () => {
         <ul>
           {!isMobile && (
             <>
-              <li>acceuil</li>
-              <li>about</li>
-              <li>services</li>
-              <li>contact</li>
+              {links.map((el, i) => {
+                return (
+                  <li key={i} onClick={(e) => navigate(el.link ?? el.text)}>
+                    {el.text}
+                  </li>
+                );
+              })}
             </>
           )}
 

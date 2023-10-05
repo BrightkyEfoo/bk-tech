@@ -1,7 +1,8 @@
-import React from 'react';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './App.scss'
-import Home from './pages/Home';
+import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.scss";
+import Home from "./pages/Home";
+import About from "./pages/about/About";
 
 const router = createBrowserRouter([
   {
@@ -9,14 +10,14 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path : '/hello',
-    element : <div>hello</div>
-  }
+    path: "/about",
+    element: <About />,
+  },
 ]);
 function App() {
   return (
     <div className="App">
-       <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </div>
   );
 }

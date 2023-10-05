@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Card1 from "../Cards/Card1";
+import Card1 from "../cards/Card1";
 import "./style.scss";
 import { Autoplay } from "swiper/modules";
 import { useScroll, motion } from "framer-motion";

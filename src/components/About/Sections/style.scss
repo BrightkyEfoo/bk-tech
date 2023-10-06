@@ -53,7 +53,7 @@
   margin: 0;
   padding: 0;
   background-image: url("../../../images/dot_bg.png");
-  padding: 150px 0;
+  padding: 150px 0 35px;
 }
 
 .about-section-1-container-sub > div > :first-child {
@@ -352,6 +352,7 @@
   max-width: 1500px;
   display: flex;
   flex-direction: column;
+  margin: 15px auto;
   align-items: center;
   justify-content: center;
   & > div {

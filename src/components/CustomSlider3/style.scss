@@ -1,31 +1,31 @@
-.about-section7-container-slider {
+.contact-section-1-container-slider {
   overflow: hidden;
   //   overflow-x: scroll;
   position: relative;
   display: flex;
   background: #fff;
-  // box-shadow: 0 11px 20px rgb(123 149 162/15%);
+  box-shadow: 0 11px 20px rgb(123 149 162/15%);
   margin: 10px auto;
-  padding: 60px 30px;
+  padding: 30px;
   gap: 60px;
-  max-width: 1000px;
-  width: 100%;
+  width: 430px;
+  height: fit-content;
   // width: auto;
-  border-radius: 40px 8px 8px;
+  border-radius: 10px;
 }
 
-.customer-details-container-about-section-7 {
+.customer-details-container-contact-section-1 {
   display: flex;
-  gap: 35px;
+  gap: 25px;
+  flex-direction: column;
   flex-shrink: 0;
-  align-items: center;
   justify-content: center;
   width: 100%;
   img {
-    height: 365px;
-    width: 300px;
+    height: 80px;
+    width: 80px;
     box-shadow: -20px 20px 35px #dcdcdc, 20px -40px 35px #fff;
-    border-radius: 8px;
+    border-radius: 50%;
     object-fit: cover;
   }
   .name {
@@ -40,13 +40,18 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
 }
 
-.pagination-container-about-section-7 {
+.pagination-container-contact-section-1 {
   position: sticky;
-  // bottom: 5px;
-  top : 100%;
-  height: fit-content;
+  top: 100%;
+  height: fit-content !important;
   right: 5px;
   align-items: flex-end;
   z-index: 5;
@@ -87,22 +92,8 @@
   }
 }
 
-@media only screen and (max-width: 740px) {
-  .customer-details-container-about-section-7 > * {
-    width: 95%;
-  }
-  .customer-details-container-about-section-7 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    img {
-      width: 20%;
-      height: auto;
-      aspect-ratio: 1/1;
-    }
-  }
-
-  .customer-details-container-about-section-7 > :first-child {
-    width: 100%;
+@media only screen and (max-width: 500px) {
+  .contact-section-1-container-slider {
+    width: 90%;
   }
 }

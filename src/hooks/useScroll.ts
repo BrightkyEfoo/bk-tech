@@ -5,11 +5,8 @@ export const useScrollTop = () => {
   const location = useLocation();
 
   useEffect(() => {
-    let app = document.getElementById("App");
-    console.log('scroll')
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    console.log("chaanged");
+    window.scrollTo({ behavior: "smooth", top: 0, left: 0 });
   }, [location.pathname]);
+
 };

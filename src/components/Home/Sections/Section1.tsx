@@ -73,7 +73,7 @@ const Section1 = () => {
             delay: 2000,
             disableOnInteraction: false,
           }}
-          onSlideChange={() => console.log("slide change")}
+          // onSlideChange={() => console.log("slide change")}
           //   onSwiper={(swiper) => console.log(swiper)}
         >
           {cards.map((el, i) => {

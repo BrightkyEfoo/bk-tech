@@ -5,17 +5,10 @@ import CommonHeroSection from "../../components/CommonHero/CommonHeroSection";
 import Section1 from "../../components/Contact/Sections/Section1";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/footer/Footer";
+import { useScrollTop } from "../../hooks/useScroll";
 
 const Contact = () => {
-  useEffect(() => {
-    let app = document.getElementById("App");
-
-    app?.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  useScrollTop()
 
   return (
     <div>

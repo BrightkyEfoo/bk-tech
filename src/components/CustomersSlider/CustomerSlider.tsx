@@ -35,7 +35,7 @@ const CustomerSlider = () => {
         });
         return res;
       });
-      console.log("selected", selected);
+      // console.log("selected", selected);
     }, 2000);
 
     return () => {

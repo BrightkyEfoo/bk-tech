@@ -1,5 +1,7 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import "./App.scss";
 import Home from "./pages/Home";
 import About from "./pages/about/About";

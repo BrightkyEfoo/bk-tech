@@ -13,7 +13,7 @@ const Section6 = () => {
           <p className="first-title blue-text">Read More Reviews</p>
           <div>
             {images.map((el, i) => {
-              return <img src={el} key={i} />;
+              return <img src={el} key={i} alt="" />;
             })}
           </div>
         </div>

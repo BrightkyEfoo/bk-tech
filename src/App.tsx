@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.scss";
 import Home from "./pages/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
+import Services from "./pages/Services/Services";
+
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/services",
+    element: <Services />,
   },
 ]);
 function App() {

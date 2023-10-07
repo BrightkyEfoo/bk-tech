@@ -48,9 +48,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   const goHome = useGoHome();
 
-  console.log("isMobile", isMobile);
   const handleToggleMenu = () => {
-    console.log("toggled");
     setisMobNavVisible((prev) => {
       return !prev;
     });

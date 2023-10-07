@@ -357,6 +357,12 @@
 }
 
 @media only screen and (max-width: 645px) {
+  .second-title {
+    font-size: 32px;
+  }
+  .first-title {
+    font-size: 28px;
+  }
   .section2-container-sub {
     & > :nth-child(2) {
       display: grid;
@@ -380,7 +386,19 @@
   }
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 420px) {
+  .second-title {
+    font-size: 28px;
+  }
+  .first-title {
+    font-size: 26px;
+  }
+
+  .section6-container-sub {
+    margin: 25px 0;
+    padding: 5px;
+  }
+
   .section6-container {
     .first-title {
       font-size: 22px;

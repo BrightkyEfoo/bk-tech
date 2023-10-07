@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeroSection from "../components/Home/Hero-Section/HeroSection";
 import Section1 from "../components/Home/Sections/Section1";
 import Section2 from "../components/Home/Sections/Section2";
@@ -7,10 +8,17 @@ import Section5 from "../components/Home/Sections/Section5";
 import Section6 from "../components/Home/Sections/Section6";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/footer/Footer";
-import { useScrollTop } from "../hooks/useScrollTop";
 
 const Home = () => {
-  useScrollTop();
+  useEffect(() => {
+    let app = document.getElementById("App");
+
+    app?.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [])
 
   return (
     <div>

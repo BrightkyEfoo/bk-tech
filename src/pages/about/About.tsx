@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/footer/Footer";
 import CommonHeroSection from "../../components/CommonHero/CommonHeroSection";
@@ -10,10 +10,10 @@ import Section5 from "../../components/About/Sections/Section5";
 import Section6 from "../../components/About/Sections/Section6";
 import Section7 from "../../components/About/Sections/Section7";
 import Section8 from "../../components/About/Sections/Section8";
-import { useScrollTop } from "../../hooks/useScrollTop";
+import { useScrollTop } from "../../hooks/useScroll";
 
 const About = () => {
-  useScrollTop();
+  useScrollTop()
 
   return (
     <div>

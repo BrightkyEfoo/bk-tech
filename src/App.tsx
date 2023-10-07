@@ -6,7 +6,6 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Services from "./pages/Services/Services";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +25,6 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  
   return (
     <div className="App" id="App">
       <RouterProvider router={router} />

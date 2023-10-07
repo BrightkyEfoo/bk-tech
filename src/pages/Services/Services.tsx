@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import CommonHeroSection from "../../components/CommonHero/CommonHeroSection";
 import Footer from "../../components/footer/Footer";
@@ -13,7 +13,7 @@ import Section8 from "../../components/Services/Sections/Section8";
 import Section9 from "../../components/Services/Sections/Section9";
 import Section10 from "../../components/Services/Sections/Section10";
 import NewsLetterFormSection from "../../components/NewsLetterFormSection/NewsLetterFormSection";
-import { useScrollTop } from "../../hooks/useScrollTop";
+import { useScrollTop } from "../../hooks/useScroll";
 
 const Services = () => {
   useScrollTop();

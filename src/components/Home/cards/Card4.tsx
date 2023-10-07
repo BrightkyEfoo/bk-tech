@@ -1,5 +1,5 @@
-import { type } from "os";
-import React from "react";
+import gsap from "gsap";
+import React, { useRef } from "react";
 type Props = {
   image: string;
   title: string;
@@ -9,12 +9,14 @@ type Props = {
   color: "purple" | "blue" | "green";
 };
 const Card4 = ({ size, image, title, subTitle, desc, color }: Props) => {
+  const imRef = useRef<HTMLImageElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
   return (
     <div className={"card-4 card-4" + size + " card-4" + color}>
-      <img src={image} />
+      <img ref={imRef} src={image} alt="" />
       <p>{title}</p>
       <p>{subTitle}</p>
-      <p>{desc}</p>
+      <p ref={descRef}>{desc}</p>
     </div>
   );
 };

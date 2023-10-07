@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import useGoHome from "./useGoHome";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export const useDesktopNavBar = () => {
@@ -23,14 +23,15 @@ export const useDesktopNavBar = () => {
 
   const navigate = useNavigate();
   const goHome = useGoHome();
+  // useMemo(() => first, [el])
   const isActualRoute = (el: { text: string; link?: string | undefined }) => {
-    console.log(location.pathname)
-    if(el.link === '/'){
-        if(location.pathname === el.link){
-            return true
-        }else{
-            return false
-        }
+    // console.log(location.pathname)
+    if (el.link === "/") {
+      if (location.pathname === el.link) {
+        return true;
+      } else {
+        return false;
+      }
     }
     return location.pathname.includes(el.link ? el.link : "/" + el.text);
   };

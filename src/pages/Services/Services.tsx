@@ -13,8 +13,11 @@ import Section8 from "../../components/Services/Sections/Section8";
 import Section9 from "../../components/Services/Sections/Section9";
 import Section10 from "../../components/Services/Sections/Section10";
 import NewsLetterFormSection from "../../components/NewsLetterFormSection/NewsLetterFormSection";
+import { useScrollTop } from "../../hooks/useScrollTop";
 
 const Services = () => {
+  useScrollTop();
+
   return (
     <div>
       <NavBar />

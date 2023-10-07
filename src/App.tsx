@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.scss";
 import Home from "./pages/Home";
@@ -26,8 +26,9 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
+  
   return (
-    <div className="App">
+    <div className="App" id="App">
       <RouterProvider router={router} />
     </div>
   );

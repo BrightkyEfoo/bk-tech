@@ -10,8 +10,11 @@ import Section5 from "../../components/About/Sections/Section5";
 import Section6 from "../../components/About/Sections/Section6";
 import Section7 from "../../components/About/Sections/Section7";
 import Section8 from "../../components/About/Sections/Section8";
+import { useScrollTop } from "../../hooks/useScrollTop";
 
 const About = () => {
+  useScrollTop();
+
   return (
     <div>
       <NavBar />

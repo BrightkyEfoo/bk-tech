@@ -4,8 +4,11 @@ import CommonHeroSection from "../../components/CommonHero/CommonHeroSection";
 import Section1 from "../../components/Contact/Sections/Section1";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/footer/Footer";
+import { useScrollTop } from "../../hooks/useScrollTop";
 
 const Contact = () => {
+  useScrollTop();
+
   return (
     <div>
       <NavBar />

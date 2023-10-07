@@ -7,9 +7,11 @@ import Section5 from "../components/Home/Sections/Section5";
 import Section6 from "../components/Home/Sections/Section6";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/footer/Footer";
+import { useScrollTop } from "../hooks/useScrollTop";
 
 const Home = () => {
-  
+  useScrollTop();
+
   return (
     <div>
       <NavBar />

@@ -47,14 +47,14 @@ const Section2 = () => {
         <div>
           <p>
             <span>
-              <Reveal2>
+              {/* <Reveal2> */}
                 <span>BK-TECH</span>
-              </Reveal2>
+              {/* </Reveal2> */}
             </span>{" "}
             <Reveal2>Une entreprise de developpement</Reveal2>
           </p>
           <p>
-            <Reveal2>
+            {/* <Reveal2> */}
               Lorem Ipsum is text of the printing and typesetting industry.
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
@@ -63,14 +63,14 @@ const Section2 = () => {
               industry's standard dummy text ever since the 1500s, when an
               unknown printer took a galley of type and scrambled it to make a
               type specimen book.
-            </Reveal2>
+            {/* </Reveal2> */}
           </p>
           <p>
-            <Reveal2>
+            {/* <Reveal2> */}
               Lorem Ipsumis simply dummy text of the printing and typesetting
               industry. Simply dummy text of the printing and typesetting
               industry.
-            </Reveal2>
+            {/* </Reveal2> */}
           </p>
           <button className="outlined-button">Request A Quote</button>
         </div>

@@ -21,7 +21,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .m-blacked {
@@ -39,6 +38,14 @@
   backdrop-filter: blur(5px);
 }
 
+.actualRoute {
+  border-bottom: 2px solid white;
+}
+
+.actualRoute.onLinkScroll {
+  border-color: #3f36b9;
+}
+
 .onScroll {
   background-color: white;
   color: #3f36b9;
@@ -54,8 +61,6 @@
   font-size: 16px;
   font-weight: bold;
 }
-
-
 
 .onScroll > ul {
   color: #3f36b9;
@@ -75,13 +80,13 @@
   color: #3f36b9;
 }
 
-.mobile-nav-sub > p:first-child{
+.mobile-nav-sub > p:first-child {
   font-size: 32px;
   margin: 0;
   font-weight: 800;
 }
 
-.mobile-nav-sub{
+.mobile-nav-sub {
   /* padding: 35px; */
   width: 45%;
   min-width: 370px;
@@ -101,7 +106,7 @@
   font-weight: bold;
 }
 
-.mobile-nav-sub > p:first-child{
+.mobile-nav-sub > p:first-child {
   background-color: white;
   padding: 12px 25px;
 }
@@ -168,7 +173,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .mobile-nav-sub > p:first-child{
+  .mobile-nav-sub > p:first-child {
     font-size: 22px;
   }
   .navbar-container > p:first-child {

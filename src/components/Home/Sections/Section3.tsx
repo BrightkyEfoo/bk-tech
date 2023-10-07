@@ -10,7 +10,7 @@ const cards = [
   {
     image: "images/image-1.jpg",
     text1: "Creative App",
-    text2: "iOs, Android",
+    text2: "iOS, Android",
     type: "small",
   },
   {
@@ -22,7 +22,7 @@ const cards = [
   {
     image: "images/image-c.jpg",
     text1: "Icon Pack",
-    text2: "iOs, Android",
+    text2: "iOS, Android",
     type: "large",
   },
 ];

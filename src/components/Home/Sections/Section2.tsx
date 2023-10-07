@@ -72,7 +72,7 @@ const Section2 = () => {
               industry.
             </Reveal2>
           </p>
-          <button>Request A Quote</button>
+          <button className="outlined-button">Request A Quote</button>
         </div>
         <div>
           {cards.map((el, i) => {

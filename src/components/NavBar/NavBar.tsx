@@ -1,12 +1,12 @@
-import { createContext, useEffect, useRef, useState } from "react";
+import { createContext } from "react";
 import "./style.css";
-import { useMediaQuery } from "react-responsive";
 import { MdSunny } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { VscMenu } from "react-icons/vsc";
 import MobileNavBar from "./MobileNavBar";
-import useGoHome from "../../hooks/useGoHome";
-import { useNavigate } from "react-router-dom";
+import { useDesktopNavBar } from "../../hooks/UseDesktopNavBar";
+import Button3 from "../Buttons/Button3";
+
 export const navContext = createContext<{
   isMobNavVisible: boolean;
   setisMobNavVisible: React.Dispatch<React.SetStateAction<boolean>>;
@@ -32,29 +32,18 @@ export const links: {
   },
 ];
 const NavBar = () => {
-  const navRef = useRef<HTMLDivElement>(null);
-  const [colorChange, setColorchange] = useState(false);
-  const isMobile = useMediaQuery({
-    query: "(max-width: 870px)",
-  });
-  const [isMobNavVisible, setisMobNavVisible] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-  const navigate = useNavigate();
-  const goHome = useGoHome();
-
-  const handleToggleMenu = () => {
-    setisMobNavVisible((prev) => {
-      return !prev;
-    });
-  };
-  window.addEventListener("scroll", changeNavbarColor);
-  useEffect(() => {}, [isMobile]);
+  const {
+    navRef,
+    colorChange,
+    isMobNavVisible,
+    setisMobNavVisible,
+    navigate,
+    goHome,
+    handleToggleMenu,
+    isMobile,
+    isActualRoute,
+    setActualRouteIndex,
+  } = useDesktopNavBar();
 
   return (
     <navContext.Provider value={{ isMobNavVisible, setisMobNavVisible }}>
@@ -62,7 +51,7 @@ const NavBar = () => {
         ref={navRef}
         className={"navbar-container " + (colorChange ? "onScroll" : "")}
       >
-        <p onClick={goHome}>
+        <p onClick={goHome} className="link">
           <span>BK</span>
           <span>-</span>
           <span>TECH</span>
@@ -73,8 +62,16 @@ const NavBar = () => {
               {links.map((el, i) => {
                 return (
                   <li
+                    className={
+                      (isActualRoute(el) ? "link actualRoute" : "link") +
+                      " " +
+                      (colorChange ? "onLinkScroll" : "")
+                    }
                     key={i}
-                    onClick={(e) => navigate(el.link ? el.link : "/" + el.text)}
+                    onClick={(e) => {
+                      navigate(el.link ? el.link : "/" + el.text);
+                      setActualRouteIndex(i);
+                    }}
                   >
                     {el.text}
                   </li>
@@ -91,10 +88,7 @@ const NavBar = () => {
             </button>
           </li>
           <li>
-            <button className="quote-button">
-              {isMobile ? <FaPhoneAlt /> : "Demander un devis"}{" "}
-              <span className="circle"></span>
-            </button>
+            <Button3 isMobile={isMobile} />
           </li>
           {isMobile && (
             <li

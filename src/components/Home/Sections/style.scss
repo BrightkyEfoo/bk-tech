@@ -23,13 +23,13 @@
     padding: 25px;
     flex: 1;
     button {
-      border: 2px solid black;
-      border-radius: 30px;
-      padding: 15px 25px;
-      font-size: 17px;
-      font-weight: bold;
-      background-color: transparent;
-      cursor: pointer;
+      // border: 2px solid black;
+      // border-radius: 30px;
+      // padding: 15px 25px;
+      // font-size: 17px;
+      // font-weight: bold;
+      // background-color: transparent;
+      // cursor: pointer;
     }
 
     @for $i from 2 through 3 {
@@ -95,6 +95,18 @@
   font-weight: bold;
   background-color: transparent;
   cursor: pointer;
+  transition: background-color ease-out 300ms, color ease 300ms,
+    border ease-in 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.outlined-button:hover {
+  border-color: #007aff;
+  background-color: #007aff;
+  color: white;
 }
 
 .section3-container-sub {

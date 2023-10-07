@@ -1,47 +1,9 @@
-import React, { useEffect, useState } from "react";
 import "./style.scss";
-const data = [
-  {
-    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-    photo: "images/girl.jpg",
-    name: "bikos maximus",
-    poste: "CEO",
-  },
-  {
-    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-    photo: "images/girl.jpg",
-    name: "bikos maximus",
-    poste: "CEO",
-  },
-];
-const CustomerSlider = () => {
-  const [selected, setSelected] = useState(0);
-  useEffect(() => {
-    const myInter = setInterval(() => {
-      const ell = document.getElementById(
-        "section6-container-sub-right-slider"
-      );
-      setSelected((prev) => {
-        let res;
-        if (prev === data.length - 1) {
-          res = 0;
-        } else {
-          res = prev + 1;
-        }
-        ell?.scrollTo({
-          top: 0,
-          left: res * ell.clientWidth,
-          behavior: "smooth",
-        });
-        return res;
-      });
-      // console.log("selected", selected);
-    }, 2000);
+import { useCustomerSlider } from "../../hooks/useCustomerSlider";
+import { data } from "./mock-data";
 
-    return () => {
-      clearInterval(myInter);
-    };
-  }, []);
+const CustomerSlider = () => {
+  const selected = useCustomerSlider(data);
 
   return (
     <div
@@ -55,6 +17,7 @@ const CustomerSlider = () => {
     </div>
   );
 };
+
 type CustomerDetailsProps = {
   text: string;
   photo: string;
@@ -70,7 +33,7 @@ const CustomerDetails = ({
   return (
     <div className="customer-details-container">
       <p>{text}</p>
-      <img src={photo} />
+      <img src={photo} alt="" />
       <div>
         <p className="name">{name}</p>
         <p className="poste">{poste}</p>

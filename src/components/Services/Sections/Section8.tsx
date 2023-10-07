@@ -3,7 +3,7 @@ import Card4 from "../cards/Card4";
 const cards: { image: string; title: string; subTitle: string }[] = [
   {
     image: "images/image-1.jpg",
-    subTitle: "ios, design",
+    subTitle: "iOS, design",
     title: "Creative",
   },
   {
@@ -18,7 +18,7 @@ const cards: { image: string; title: string; subTitle: string }[] = [
   },
   {
     image: "images/image-4.jpg",
-    subTitle: "Android & iOs, Design",
+    subTitle: "Android & iOS, Design",
     title: "Icon Pack",
   },
   {

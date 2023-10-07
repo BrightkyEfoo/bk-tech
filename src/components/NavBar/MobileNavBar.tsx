@@ -25,7 +25,10 @@ const MobileNavBar = () => {
         <ul>
           {links.map((el, i) => {
             return (
-              <li key={i} onClick={(e) => navigate(el.link ?? el.text)}>
+              <li
+                key={i}
+                onClick={(e) => navigate(el.link ? el.link : "/" + el.text)}
+              >
                 {el.text}
               </li>
             );

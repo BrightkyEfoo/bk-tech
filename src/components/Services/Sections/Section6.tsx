@@ -42,7 +42,7 @@ const Section6 = () => {
     <div className="services-section-6-container">
       <div className="services-section-6-container-sub">
         <span className="title-red">WE DELIVER OUR BEST</span>
-        <h2 className="title-blue">Why Choose Niwax</h2>
+        <h2 className="title-blue">Why Choose BK-ECH</h2>
         <p className="simple-about-p">
           Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem.
           In vel hendrerit nisi. Vestibulum eget risus velit.

@@ -1,4 +1,3 @@
-import gsap from "gsap";
 import React, { useRef } from "react";
 type Props = {
   image: string;

@@ -158,9 +158,10 @@ const Section1 = () => {
       placeholder: "Brief about the project",
       elName: "textarea",
       name: "brief",
-      errorMessage: "Please enter your name",
+      errorMessage:
+        "Please enter brief of the project (About 10000 characters) ",
       Icon: FaMessage,
-      verificator: (value) => value.length > 50,
+      verificator: (value) => value.length > 10000,
       onChange: handleChangeByTagName,
       value: form.brief,
       type: "",

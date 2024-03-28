@@ -10,7 +10,7 @@ jobs:
   test-docker:
     runs-on: self-hosted
     steps:
-      - run: docker --version
+      - run: docker-compose up -d
 
   # dockerize :
   #   runs-on : self-hosted

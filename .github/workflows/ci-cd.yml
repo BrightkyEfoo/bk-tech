@@ -3,7 +3,7 @@ name: bk-ci-cd
 env:
     NODE_VERSION: '20.x'
     FOLDER: ~/applications/bk-tech
-    IMAGE: front-cs-community
+    IMAGE: brightky/bk-tech
     IMAGE_VERSION: latest
 
 on: 

@@ -81,5 +81,7 @@ jobs:
                     port: 22
                     key: ${{ secrets.SSH_PRIVATE_KEY }}
                     script: |
-                        docker compose -f ${{ env.FOLDER }}/compose.yaml up -d
+                        docker compose rm -f
+                        docker compose pull
+                        docker compose -f ${{ env.FOLDER }}/compose.yaml up --build -d
 

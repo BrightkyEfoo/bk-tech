@@ -1,8 +1,7 @@
 version: '4.2.3'
 services:
   client:
-    build:
-      context: .
+    image: brightky/bk-tech:latest
     environment:
       NODE_ENV: production
     ports:

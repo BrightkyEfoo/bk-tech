@@ -22,7 +22,7 @@ jobs:
             with:
               host: ${{ secrets.SSH_HOST }}
               username: ${{ secrets.SSH_USER }}
-              port: 21
+              port: 22
               key: ${{ secrets.SSH_PRIVATE_KEY }}
               script: |
                 mkdir -p  ${{ env.FOLDER }}
@@ -39,7 +39,7 @@ jobs:
             with:
                 host: ${{ secrets.SSH_HOST }}
                 username: ${{ secrets.SSH_USER }}
-                port: 21
+                port: 22
                 key: ${{ secrets.SSH_PRIVATE_KEY }}
                 source: 'compose.yaml'
                 target: ${{ env.FOLDER }}
@@ -78,7 +78,7 @@ jobs:
                 with:
                     host: ${{ secrets.SSH_HOST }}
                     username: ${{ secrets.SSH_USER }}
-                    port: 21
+                    port: 22
                     key: ${{ secrets.SSH_PRIVATE_KEY }}
                     script: |
                         docker compose -d up

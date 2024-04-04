@@ -68,6 +68,7 @@ jobs:
                     context: .
     run-app:
         runs-on: ubuntu-latest
+        needs: [dockerize,copy-configs]
         steps:
             - 
                 name: Create folder

@@ -1,0 +1,81 @@
+name: bk-ci-cd
+
+env:
+    NODE_VERSION: '20.x'
+    FOLDER: ~/applications/bk-tech
+    IMAGE: front-cs-community
+    IMAGE_VERSION: latest
+
+on: 
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+
+jobs:
+    create-folder:
+        name: Create folder
+        runs-on: ubuntu-latest
+        steps:
+          - name: Create folder
+            uses: appleboy/ssh-action@v1.0.3
+            with:
+              host: ${{ secrets.SSH_HOST }}
+              username: ${{ secrets.SSH_USER }}
+              key: ${{ secrets.SSH_PRIVATE_KEY }}
+              script: |
+                mkdir -p  ${{ env.FOLDER }}
+                chmod ugo+rwx  ${{ env.FOLDER }}
+
+    copy-configs:
+        name: 'copy configs'
+        runs-on: ubuntu-latest
+        needs: create-folder
+        steps:
+          - uses: actions/checkout@master
+          - name: copy file via ssh password
+            uses: appleboy/scp-action@master
+            with:
+                host: ${{ secrets.SSH_HOST }}
+                username: ${{ secrets.SSH_USER }}
+                key: ${{ secrets.SSH_PRIVATE_KEY }}
+                source: 'compose.yaml'
+                target: ${{ env.FOLDER }}
+    dockerize:
+        runs-on: ubuntu-latest
+        steps:
+            -
+                name: Checkout
+                uses: actions/checkout@v4
+            -
+                name: Set up QEMU
+                uses: docker/setup-qemu-action@v3
+            -
+                name: Set up Docker Buildx
+                uses: docker/setup-buildx-action@v3
+            -
+                name: Login to Docker Hub
+                uses: docker/login-action@v3
+                with:
+                    username: ${{ secrets.DOCKER_HUB__USERNAME }}
+                    password: ${{ secrets.DOCKER_HUB__TOKEN }}
+            -
+                name: Build and push
+                uses: docker/build-push-action@v5
+                with:
+                    push: true
+                    tags: ${{env.IMAGE}}:${{env.IMAGE_VERSION}}
+                    context: .
+    run-app:
+        runs-on: ubuntu-latest
+        steps:
+            - 
+                name: Create folder
+                uses: appleboy/ssh-action@v1.0.3
+                with:
+                    host: ${{ secrets.SSH_HOST }}
+                    username: ${{ secrets.SSH_USER }}
+                    key: ${{ secrets.SSH_PRIVATE_KEY }}
+                    script: |
+                        docker compose -d up
+
